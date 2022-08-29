@@ -5,8 +5,8 @@ import ExpenseItem from "./ExpenseItem";
 function Expenses(props) {
   return (
     <Card className="expenses">
-      {props.expenses.map((e) => {
-        return <ExpenseItem title={e.title} date={e.date} amount={e.amount} />;
+      {props.expenses.map((e, idx) => {
+        return <ExpenseItem title={e.title} date={e.date} amount={e.amount} key={idx}/>;
       })}
     </Card>
   );
